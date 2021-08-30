@@ -1,2 +1,2 @@
 # KattisSolutions
-Solutions to various Kattis problems
+Solutions to various Kattis problems.
