@@ -10,7 +10,7 @@ int main()
 	cin.tie(NULL);
 	cout.tie(NULL);
 
-	int cost, n_lawns;
+	double cost, n_lawns;
 
 	cin >> cost;
 	cin >> n_lawns;
