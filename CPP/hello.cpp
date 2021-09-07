@@ -1,6 +1,6 @@
 //Hello World! https://open.kattis.com/problems/hello
 
-#include <bits/stdc++.h>
+#include <iostream>
 
 using namespace std;
 
