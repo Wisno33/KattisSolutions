@@ -1,46 +1,45 @@
-//CD https://open.kattis.com/problems/cd
-
-#include <iostream>
+#include <bits/stdc++.h>
 #include <unordered_set>
 
 using namespace std;
 
-int main(){
+int main()
+{
+	ios_base::sync_with_stdio(false);
+	cin.tie(NULL);
+	cout.tie(NULL);
 
-	unordered_set<int> map;
+	int n, m, c, num_owned = 0;
 
-	while(true){
+	unordered_set<int> cds;
 
-		map.clear();
+	while(cin >> n >> m)
+	{
 
-		int N;
-		int M;
-		int cd;
+		if(n == 0 && m == 0)
+			return 0;
 
-		cin >> N;
-		cin >> M;
-
-		if(N == 0 && M == 0){
-			break;
+		int k = 0;
+		for(; k < n; k++)
+		{
+			cin >> c;
+			cds.insert(c);
 		}
 
-		int count = 0;
-
-		for(int i=0; i<N; i++){
-			cin >> cd;
-			map.insert(cd);
+		k = 0;
+		for(; k < m; k++)
+		{
+			cin >> c;
+			if(cds.find(c) != cds.end())
+				num_owned++;
 		}
 
-		for(int i=0; i<M; i++){
-			cin >> cd;
-			if(map.count(cd)){
-				count++;
-			}
-		}
+		cout << num_owned << endl;
 
-		cout << count << "\n";
+		cds.clear();
+		num_owned = 0;
+	}	
 
-	}
 
 	return 0;
 }
